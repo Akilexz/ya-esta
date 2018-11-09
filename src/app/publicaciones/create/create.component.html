@@ -1,0 +1,111 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="subitem col-lg-6 rowup col-md-3 col-sm-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-body">
+                        <div id="typography">
+                            <table class="table">
+                        
+                                <div class="col-12">
+                            <th>
+                                Nombre
+                                <input  type="text" pInputText class="form-control" size="50" placeholder="Nombre">
+                                
+                            </th>
+                            
+                            <th >  
+
+                                    <div style="margin-left: 40px"> Prioridad</div>
+                                    <div style="margin-left: 40px">   
+                                        
+                                                                                   
+                                    <select id="lista " name="Prioridad" class="form-control"  >                                    
+                                            <option value="Alta" >Alta</option>
+                                            <option value="Media" >Media</option>
+                                            <option value="Baja" >Baja</option>
+                                        </select>
+                                    </div>
+                                    </th>
+                                    
+                            <th >
+                                <div style="margin-left: 60px">Fecha</div>
+                                    
+                                    <div style="margin-left: 60px">
+                                       <p-calendar [(ngModel)]="date" [inline]="false"></p-calendar>
+                                    </div>
+                                    </th>
+                        
+                                
+                        </div>
+                            <div class="col-12">
+                                    <th>
+                                Texto
+                                            <input type="text" pInputText class="form-control" size="80" placeholder="Descripcion">
+                                    </th>
+                                    <th>
+                                    
+                                            <div style="margin-left: 40px"> Tipo</div>
+                                            <div style="margin-left: 40px">
+                                                <body>
+                                            <select id="lista " name="lista" class="form-control">
+                                                <option value="normal">normal</option>
+                                                <option value="urgente">urgente</option>
+                                                <option value="atrasado">atrasado</option>
+                                                <option value="importante">importante</option>
+                                            </select>
+                                        
+
+                                        </body>
+                                            </div>
+             
+                                        </th>
+                                    
+                                        <th>
+                                            <div style="margin-left: 40px">Seleccione Destino</div>
+                                                   <div style="margin-left: 40px">
+                                                <select id="lista " name="lista" class="form-control">
+                                                    <option value="facebook">facebook</option>
+                                                    <option value="Gmail">Gmail</option>
+                                                    <option value="youtube">youtube</option>
+                                                </select>
+                                            </div>
+                                            </th>
+                                    </div>          
+                             
+                    
+                
+                <button type="button" class="btn btn-round btn-outline-info" title="Aceptar">
+                    <a href="/multimedia/multimediaCreate" title="Aceptar" role="alert">Aceptar</a>
+                </button>
+
+                <tr *ngFor="let publicacion of  publicaciones">
+
+
+                    <td>{{ publicacion.pubNombre}}
+                    </td>
+                    <td>{{publicacion.pubTexto}}
+                    </td>
+                    <td>{{publicacion.pubPrioridad}}
+                    </td>
+                    <td>{{publicacion.pubFecha}}
+                    </td>
+                    <td>{{publicacion.pubTipo}}
+                    </td>
+                    <td>{{publicacion.pubEstado}}
+                    </td>
+
+                </tr>
+
+                      
+            
+        
